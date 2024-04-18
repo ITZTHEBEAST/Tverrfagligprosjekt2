@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            text-align: center;
+            background-color: white;
+            width: 200px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .greeting {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        button {
+            background-color: #0097A7; /* Darker cyan */
+            border: 2px solid #333; /* Dark gray outline */
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            width: 100px;
+            margin: 10px; /* Added space between buttons */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="greeting" id="greeting"></div>
+        <form action="register.php" method="get">
+            <button type="submit">Register</button>
+        </form>
+        <form action="login.php" method="get">
+            <button type="submit">Login</button>
+        </form>
+    </div>
+
+    <script>
+        function updateGreeting() {
+            const now = new Date();
+            const hour = now.getHours();
+            let greeting;
+            if (hour < 12) {
+                greeting = "Velkommen";
+            } else if (hour < 18) {
+                greeting = "Velkommen";
+            } else {
+                greeting = "Velkommen";
+            }
+            document.getElementById("greeting").textContent = greeting;
+        }
+        updateGreeting(); // Update greeting on load
+        setInterval(updateGreeting, 60000); // Update greeting every minute
+    </script>
+</body>
+</html>
