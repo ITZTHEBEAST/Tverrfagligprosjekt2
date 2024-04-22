@@ -51,6 +51,7 @@ if (!isset($_SESSION['username'])) {
     <!-- Add a logout button -->
     <form action="logout.php" method="post">
         <button type="submit">Logg ut</button>
+        
     </form>
 </body>
 </html>
