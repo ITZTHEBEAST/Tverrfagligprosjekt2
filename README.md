@@ -38,7 +38,7 @@
    - Se etter en popup-melding som sier at du blir logget ut.
    - Sjekk om du blir sendt tilbake til innloggingssiden etter 10 sekunder.
      
-# Spørsemål
+# Tilbakemeldingsspørsmål
 Hvordan var opplevelsen din med registreringsskjemaet?
 Klarte du å logge inn uten problemer?
 Hva synes du om designet og brukervennligheten til dashbordssiden?
