@@ -47,24 +47,5 @@
             <button type="submit">Login</button>
         </form>
     </div>
-
-    <script>
-        function updateGreeting() {
-            const now = new Date();
-            const hour = now.getHours();
-            let greeting;
-            if (hour < 12) {
-                greeting = "Velkommen";
-            } else if (hour < 18) {
-                greeting = "Velkommen";
-            } else {
-                greeting = "Velkommen";
-            }
-            document.getElementById("greeting").textContent = greeting;
-        }
-        updateGreeting(); // Update greeting on load
-        setInterval(updateGreeting, 60000); // Update greeting every minute
-    </script>
-    
 </body>
 </html>
