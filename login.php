@@ -1,6 +1,7 @@
 <?php
 session_start();
 
+
 // Database connection details
 $servername = "172.20.128.65";
 $username = "root";
