@@ -1,4 +1,8 @@
 # IP:172.20.128.55
+# Om prosjektet
+Dette prosjektet er en login side, der du kan lage og bruke brukere, som er koblet til en database
+
+
 ## index.html:
 * Startsiden for innloggingssiden med innloggings- og registreringsskjemaer.
 
