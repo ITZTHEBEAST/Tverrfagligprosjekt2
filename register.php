@@ -17,7 +17,7 @@ function usernameExists($conn, $username) {
 // Function to validate password criteria
 function validatePassword($password) {
     return strlen($password) <= 8 && preg_match('/[A-Z]/', $password);
-    
+
 }
 
 // Check if form is submitted
@@ -27,6 +27,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
     }
+     
 
     // Retrieve and sanitize form data
     $username = mysqli_real_escape_string($conn, $_POST['username']);
