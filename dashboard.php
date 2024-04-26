@@ -16,22 +16,20 @@ if (!isset($_SESSION['username'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
     <script>
-        // Function to redirect to login page after inactivity
         function redirectOnInactivity() {
             setTimeout(function() {
                 // Show popup message
                 alert("Tiden gikk ut");
                 // Redirect to login page
                 window.location.href = 'login.php?timeout=true';
-            }, 10000); // 10 seconds (adjust as needed)
+            }, 10000);
         }
 
-        // Start the inactivity timer
         document.addEventListener('DOMContentLoaded', function() {
             redirectOnInactivity();
         });
 
-        // Reset the inactivity timer on user activity
+    
         document.addEventListener('mousemove', function() {
             clearTimeout(timeoutId);
             redirectOnInactivity();
@@ -45,10 +43,10 @@ if (!isset($_SESSION['username'])) {
 </head>
 <body>
     <h2>Hei, <?php echo $_SESSION['username']; ?>!</h2>
-    <!-- Add your dashboard content here -->
+
     <p>Velkommen til din side!.</p>
 
-    <!-- Add a logout button -->
+    
     <form action="logout.php" method="post">
         <button type="submit">Logg ut</button>
         
