@@ -44,7 +44,11 @@ Dette prosjektet er en login side, der du kan lage og bruke brukere, som er kobl
      
 # Tilbakemeldingsspørsmål
 Hvordan var opplevelsen din med registreringsskjemaet?
+
 Klarte du å logge inn uten problemer?
+
 Hva synes du om designet og brukervennligheten til dashbordssiden?
+
 Merket du den automatiske utloggingen? Var det forstyrrende eller nyttig?
+
 Har du noen forslag til forbedringer av nettstedets funksjonalitet eller design?
