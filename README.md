@@ -52,3 +52,12 @@ Hva synes du om designet og brukervennligheten til dashbordssiden?
 Merket du den automatiske utloggingen? Var det forstyrrende eller nyttig?
 
 Har du noen forslag til forbedringer av nettstedets funksjonalitet eller design?
+
+
+# Sikkerhet
+Hvordan jeg har tatt hensyn til sikkerhet:
+- Må ha 8 bokstaver og 1 stor bokstav (validering av passordkompleksitet)
+- må ha et unikt nav (nunike nøkler)
+- passordene blir hasha i databasen (passord hashing)
+- session når du logger inn (sesjonsstyring)
+
