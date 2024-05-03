@@ -136,18 +136,18 @@ if (isset($_POST['buy_cheese'])) {
     <title>Dashboard</title>
 </head>
 <body>
-    <h1>Welcome, <?php echo $_SESSION['username']; ?>!</h1>
-    <p>Money: <?php echo number_format($_SESSION['money'], 0, '', ''); ?></p>
-    <p>Cheese: <?php echo $_SESSION['cheese']; ?></p>
+    <h1>Velkommen, <?php echo $_SESSION['username']; ?>!</h1>
+    <p>Penger: <?php echo number_format($_SESSION['money'], 0, '', ''); ?></p>
+    <p>Ost: <?php echo $_SESSION['cheese']; ?></p>
     <form method="post">
-        <button type="submit" name="click">Click</button>
+        <button type="submit" name="click">Klikk meg!</button>
         <?php
             // Recalculate the price of cheese after each purchase
             $baseCheesePrice = 5; // Base price of cheese
             $multiplier = 0.1; // Multiplier for cheese price
             $cheesePrice = $baseCheesePrice * (1 + $multiplier * $_SESSION['cheese']); // Calculate actual price of cheese
         ?>
-        <button type="submit" name="buy_cheese">Buy Cheese (<?php echo number_format($cheesePrice, 0, '', ''); ?> money)</button>
+        <button type="submit" name="buy_cheese">Kjøp ost (<?php echo number_format($cheesePrice, 0, '', ''); ?> penger)</button>
     </form>
     <a href="logout.php">Logout</a>
     <style>
@@ -193,6 +193,44 @@ if (isset($_POST['buy_cheese'])) {
             text-decoration: underline;
         }
     </style>
+
+    <div class="manual">
+        Klikk på "klikk" knappen for å få penger, når du har nok penger kan du kjøpe ost
+        den vil gi deg 0.1 mer en det du har.(starter på 1)
+        <style>
+         .manual {
+            background-color: #f0f0f0;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 300px;
+            margin: 20px 20px 0 auto; /* Adjusted margin */
+            text-align: justify;
+            position: relative;
+        }
+        .manual:before {
+            content: '?';
+            position: absolute;
+            top: 0;
+            right: 0;
+            transform: translate(50%, -50%);
+            width: 20px;
+            height: 20px;
+            background-color: #007bff;
+            color: #fff;
+            font-size: 14px;
+            font-weight: bold;
+            text-align: center;
+            border-radius: 50%;
+            line-height: 20px;
+            cursor: pointer;
+        }
+        .manual:hover:before {
+            content: attr(title);
+        }
+
+        </style>
+    </div>
 </body>
 </html>
 
