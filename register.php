@@ -116,10 +116,30 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             text-align: center;
             margin-top: 10px;
         }
+        .info {
+            cursor: help; /* Change cursor to indicate it's clickable */
+            position: relative;
+        }
+        .info:before {
+            content: '?'; /* Display '?' as the icon */
+            color: blue; /* Color of the icon */
+            font-weight: bold;
+            margin-left: 5px; /* Adjust the space between the icon and text */
+        }
+        .info:hover:before {
+            content: attr(title); /* Show the title text as tooltip */
+            position: absolute;
+            background-color: rgba(0, 0, 0, 0.8); /* Tooltip background color */
+            color: white; /* Tooltip text color */
+            padding: 5px;
+            border-radius: 5px;
+            white-space: nowrap; /* Prevent text wrapping */
+            z-index: 1; /* Ensure tooltip appears above other elements */
+        }
     </style>
 </head>
 <body>
-    <div class="container">
+<div class="container">
         <h2>Register</h2>
         <?php if (isset($error)) : ?>
             <p class="error"><?= $error ?></p>
@@ -130,7 +150,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <input type="text" name="username" required>
             </div>
             <div>
-                <label for="password">Passord:</label>
+                <label for="password">Passord: <span class="info" title="Passordet må bestå av maksimalt 8 tegn og inneholde minst én stor bokstav"></span></label>
                 <input type="password" name="password" required>
             </div>
             <div>
