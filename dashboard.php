@@ -68,6 +68,7 @@ if (isset($_POST['click'])) {
     if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
     }
+    
 
     // Update money amount in the database
     $username = $_SESSION['username'];
